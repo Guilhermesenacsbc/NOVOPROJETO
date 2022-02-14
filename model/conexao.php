@@ -4,5 +4,5 @@
     $senha="";
     $nomebanco="lojajogoti10m";
 
-    $conn = mysqli_connect($url,$usuario,$senha,$nomebanco)
+    $conn = mysqli_connect($url,$usuario,$senha,$nomebanco);
 ?>
