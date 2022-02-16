@@ -10,10 +10,10 @@
 <div class="centroform">
 <form action="#" method="Post" class="row row-cols-lg-auto g-3 align-items-center">
   <div class="col-12">
-    <label class="visually-hidden" for="inlineFormInputGroupUsername">Nome do Usuário</label>
+    <label class="visually-hidden" for="inlineFormInputGroupUsername">Email do usuario</label>
     <div class="input-group">
       <div class="input-group-text">Nome</div>
-      <input type="text" name="nomeUsu" class="form-control" id="inlineFormInputGroupUsername" placeholder="Nome do Usuário">
+      <input type="text" name="emailUsu" class="form-control" id="inlineFormInputGroupUsername" placeholder="Email do Usuário">
     </div>
   </div>
 <div class="col-12">
@@ -32,25 +32,23 @@
   </thead>
   <tbody>
 <?php
-  $nomeusu = isset($_POST["nomeUsu"])? $_POST["nomeUsu"] : "";
+  $emailusu = isset($_POST["emailUsu"])? $_POST["emailUsu"] : "";
 
-  if($nomeusu){
+  if($emailusu){
+  $dadoemail = visuUsuarioEmail($conn,$emailusu);
 
-  
-  $dado = visuUsuarioNome($conn,$nomeusu);
-
-  foreach ($dado as $nomeUsuarios):
+  foreach ($dadoemail as $emailUsuarios):
 ?>
     <tr>
-      <th scope="row"><?=$nomeUsuarios["idusu"]?></th>
-      <td><?=$nomeUsuarios["nomeusu"]?></td>
-      <td><?=$nomeUsuarios["emailusu"]?></td>
-      <td><?=$nomeUsuarios["foneusu"]?></td>
+      <th scope="row"><?=$emailUsuarios["idusu"]?></th>
+      <td><?=$emailUsuarios["nomeusu"]?></td>
+      <td><?=$emailUsuarios["emailusu"]?></td>
+      <td><?=$emailUsuarios["foneusu"]?></td>
     </tr>
     
     <?php
   endforeach;
-    }
+  }
     ?>
 
   </tbody>
