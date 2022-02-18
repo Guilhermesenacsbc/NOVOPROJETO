@@ -29,7 +29,7 @@
             <li><a class="dropdown-item" href="cadusuario.php">Cadastrar</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Pesquisar por Perfil</a></li>
-            <li><a class="dropdown-item" href="#">Pesquisar por Código</a></li>
+            <li><a class="dropdown-item" href="../view/visuUsuCodigo.php">Pesquisar por Código</a></li>
             <li><a class="dropdown-item" href="../view/visuUsuNome.php">Pesquisar por Nome</a></li>
             <li><a class="dropdown-item" href="../view/visuUsuEmail.php">Pesquisar por E-mail</a></li>
           </ul>

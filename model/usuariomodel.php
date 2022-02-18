@@ -20,9 +20,9 @@ function visuUsuarioEmail($conn,$emailusu){
     return $resultado;
 }
 function visuUsuarioCodigo($conn,$codigousu){
-    $query = "select * from tbusuario where nomeusu like '%{$codigousu}%'";
+    $query = "select * from tbusuario where idusu = '{$codigousu}'";
     $resultado = mysqli_query($conn, $query);
-    $resultado = mysqli_fetch_array($resultado);
+   
     return $resultado;
 }
 
